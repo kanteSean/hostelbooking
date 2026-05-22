@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Hostel Management - Rooms</title>
+
+<style type="text/css">
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2A3F00;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #A0A0A4;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2A3F00;
+    font-weight: bold;
+    margin: 0 20px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.form-card {
+    background-color: #CCFFFF;
+    padding: 30px;
+    border-radius: 8px;
+    width: 450px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.form-card h2 {
+    color: #2A3F00;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2A1F00;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #2A3F00;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #405d00;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Hostel Booking System</h1>
+</header>
+
+<nav>
+    <a href="registration.html">Registration</a>
+    <a href="hostel.html">Hostel</a>
+    <a href="room.html">Rooms</a>
+    <a href="payment.html">Payment</a>
+</nav>
+
+<div class="container">
+
+<div class="form-card">
+
+<h2>Room Details</h2>
+
+<form method="post" action="room.php">
+
+    <!-- ROOM ID -->
+    <div class="form-group">
+        <label>Room ID</label>
+        <input type="text" name="roomid" required placeholder="Enter Room ID">
+    </div>
+
+    <!-- HOSTEL ID -->
+    <div class="form-group">
+        <label>Hostel ID</label>
+        <input type="text" name="hostelid" required placeholder="Enter Hostel ID">
+    </div>
+
+    <!-- ROOM TYPE -->
+    <div class="form-group">
+        <label>Room Type</label>
+        <input type="text" name="roomtype" required placeholder="Single / Double / Self Contained">
+    </div>
+
+    <!-- PRICE -->
+    <div class="form-group">
+        <label>Price (UGX)</label>
+        <input type="number" name="price" required placeholder="Enter room price">
+    </div>
+
+    <!-- STATUS -->
+    <div class="form-group">
+        <label>Status</label>
+
+        <select name="status" required>
+            <option value="available">Available</option>
+            <option value="booked">Booked</option>
+        </select>
+    </div>
+
+    <input type="submit" value="Add Room">
+
+</form>
+
+</div>
+</div>
+
+</body>
+</html>

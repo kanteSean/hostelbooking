@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Hostel Management - Payment Form</title>
+
+<style type="text/css">
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2A3F00;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #A0A0A4;
+    text-align: center;
+    padding: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+    text-decoration: none;
+    color: #2A3F00;
+    font-weight: bold;
+    margin: 0 20px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.form-card {
+    background-color: #CCFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    width: 450px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.form-card h2 {
+    text-align: center;
+    color: #2A3F00;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2A1F00;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #2A3F00;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #405d00;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Hostel Booking System</h1>
+</header>
+
+<nav>
+    <a href="registration.html">Registration</a>
+    <a href="hostel.html">Hostels</a>
+    <a href="room.html">Rooms</a>
+    <a href="payment.html">Payments</a>
+</nav>
+
+<div class="container">
+
+<div class="form-card">
+
+<h2>Payment Form</h2>
+
+<form method="post" action="process_payment.php">
+
+    <div class="form-group">
+        <label>Payment ID</label>
+
+        <input 
+            type="text"
+            name="paymentid"
+            required
+            placeholder="e.g PAY001"
+        />
+    </div>
+
+    <div class="form-group">
+        <label>Payment Method</label>
+
+        <select name="payment_method" required>
+            <option value="">-- Select Method --</option>
+            <option value="Mobile Money">Mobile Money</option>
+            <option value="Bank Transfer">Bank Transfer</option>
+            <option value="Cash">Cash</option>
+            <option value="Credit Card">Credit Card</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Amount (UGX)</label>
+
+        <input 
+            type="number"
+            name="amount"
+            required
+            placeholder="Enter Amount"
+        />
+    </div>
+
+    <input type="submit" value="Confirm Payment" />
+
+</form>
+
+</div>
+</div>
+
+</body>
+</html>

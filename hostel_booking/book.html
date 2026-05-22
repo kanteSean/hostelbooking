@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Booking Form</title>
+<style type="text/css">
+/* Basic Reset */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Soft light blue */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header & Horizontal Navigation */
+header {
+    background-color: #2A3F00; /* Dark green from your original style */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #A0A0A4;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+    text-decoration: none;
+    color: #2A3F00;
+    font-weight: bold;
+    margin: 0 20px; /* This makes the links horizontal with spacing */
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* Main Form Container */
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.form-card {
+    background-color: #CCFFFF;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 450px;
+}
+
+.form-card h2 {
+    color: #2A3F00;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    color: #2A1F00;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #2A3F00;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #405d00;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Hostel Booking System</h1>
+</header>
+
+<nav>
+    <a href="registration.html">Registration</a>
+    <a href="hostel.html">Hostel</a>
+    <a href="room.html">Rooms</a><a href="payment.html">Payment</a></nav>
+
+<div class="container">
+    <div class="form-card">
+        <h2>Book a Room</h2>
+        <form action="book.php" method="post" name="form1" id="form1">
+            
+            <div class="form-group">
+                <label>Booking ID</label>
+                <input type="text" name="bookingid" required />
+            </div>
+
+            <div class="form-group">
+                <label>Room Number</label>
+                <input type="text" name="room" required />
+            </div>
+
+            <div class="form-group">
+                <label>Booking Date</label>
+                <input type="date" name="booking_date" required />
+            </div>
+
+            <div class="form-group">
+                <label>Status</label>
+                <input type="text" name="status" placeholder="e.g. Pending/Confirmed" />
+            </div>
+
+            <input type="submit" name="Submit" value="Submit Booking" />
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
